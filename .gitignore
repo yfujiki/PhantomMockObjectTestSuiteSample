@@ -117,4 +117,5 @@ DerivedData/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
-
+## Cuckoo
+GeneratedMocks.swift
