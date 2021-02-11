@@ -16,6 +16,11 @@
 		DB070D1125B7F9BE00FB0685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB070D1025B7F9BE00FB0685 /* Assets.xcassets */; };
 		DB070D1425B7F9BE00FB0685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB070D1225B7F9BE00FB0685 /* LaunchScreen.storyboard */; };
 		DB070D5F25B7FEEC00FB0685 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB070D5E25B7FEEC00FB0685 /* GeneratedMocks.swift */; };
+		DB18937225D52B5A002E8961 /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18937125D52B5A002E8961 /* Parent.swift */; };
+		DB18937825D52B6E002E8961 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18937725D52B6E002E8961 /* Child.swift */; };
+		DB18937C25D52B7C002E8961 /* ChildProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18937B25D52B7C002E8961 /* ChildProtocol.swift */; };
+		DB18938025D52C18002E8961 /* ParentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18937F25D52C18002E8961 /* ParentProtocol.swift */; };
+		DB18938C25D52EB5002E8961 /* ParentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18938B25D52EB5002E8961 /* ParentTests.swift */; };
 		DB60757825BE8EC80013426A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60757725BE8EC80013426A /* ViewModel.swift */; };
 		DB60758225BE8EDB0013426A /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60758125BE8EDB0013426A /* LoggerProtocol.swift */; };
 		DB60758725BE8EE40013426A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60758625BE8EE40013426A /* Logger.swift */; };
@@ -52,6 +57,11 @@
 		DB070D1A25B7F9BE00FB0685 /* TestSuiteSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSuiteSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB070D2025B7F9BE00FB0685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB070D5E25B7FEEC00FB0685 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		DB18937125D52B5A002E8961 /* Parent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
+		DB18937725D52B6E002E8961 /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		DB18937B25D52B7C002E8961 /* ChildProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProtocol.swift; sourceTree = "<group>"; };
+		DB18937F25D52C18002E8961 /* ParentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentProtocol.swift; sourceTree = "<group>"; };
+		DB18938B25D52EB5002E8961 /* ParentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTests.swift; sourceTree = "<group>"; };
 		DB60757725BE8EC80013426A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DB60758125BE8EDB0013426A /* LoggerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerProtocol.swift; sourceTree = "<group>"; };
 		DB60758625BE8EE40013426A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -125,7 +135,8 @@
 		DB070D0625B7F9BD00FB0685 /* TestSuiteSample */ = {
 			isa = PBXGroup;
 			children = (
-				DB60753925BA7FBF0013426A /* LogicAndModels */,
+				DB18937025D52B34002E8961 /* Delegate */,
+				DB60753925BA7FBF0013426A /* ViewModelAndLogger */,
 				DB070D0725B7F9BD00FB0685 /* AppDelegate.swift */,
 				DB070D0925B7F9BD00FB0685 /* SceneDelegate.swift */,
 				DB070D0B25B7F9BD00FB0685 /* ViewController.swift */,
@@ -143,18 +154,30 @@
 				DB070D5E25B7FEEC00FB0685 /* GeneratedMocks.swift */,
 				DB070D2025B7F9BE00FB0685 /* Info.plist */,
 				DB60759725BE93C90013426A /* ViewModelTests.swift */,
+				DB18938B25D52EB5002E8961 /* ParentTests.swift */,
 			);
 			path = TestSuiteSampleTests;
 			sourceTree = "<group>";
 		};
-		DB60753925BA7FBF0013426A /* LogicAndModels */ = {
+		DB18937025D52B34002E8961 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DB18937125D52B5A002E8961 /* Parent.swift */,
+				DB18937F25D52C18002E8961 /* ParentProtocol.swift */,
+				DB18937725D52B6E002E8961 /* Child.swift */,
+				DB18937B25D52B7C002E8961 /* ChildProtocol.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		DB60753925BA7FBF0013426A /* ViewModelAndLogger */ = {
 			isa = PBXGroup;
 			children = (
 				DB60757725BE8EC80013426A /* ViewModel.swift */,
 				DB60758125BE8EDB0013426A /* LoggerProtocol.swift */,
 				DB60758625BE8EE40013426A /* Logger.swift */,
 			);
-			path = LogicAndModels;
+			path = ViewModelAndLogger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +357,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/LogicAndModels/LoggerProtocol.swift\" \\\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/ViewModelAndLogger/LoggerProtocol.swift\" \\\n\"${INPUT_DIR}/Delegate/ParentProtocol.swift\" \\\n\"${INPUT_DIR}/Delegate/ChildProtocol.swift\" \\\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -345,10 +368,14 @@
 			files = (
 				DB60757825BE8EC80013426A /* ViewModel.swift in Sources */,
 				DB070D0C25B7F9BD00FB0685 /* ViewController.swift in Sources */,
+				DB18937C25D52B7C002E8961 /* ChildProtocol.swift in Sources */,
+				DB18938025D52C18002E8961 /* ParentProtocol.swift in Sources */,
+				DB18937825D52B6E002E8961 /* Child.swift in Sources */,
 				DB070D0825B7F9BD00FB0685 /* AppDelegate.swift in Sources */,
 				DB60758225BE8EDB0013426A /* LoggerProtocol.swift in Sources */,
 				DB60758725BE8EE40013426A /* Logger.swift in Sources */,
 				DB070D0A25B7F9BD00FB0685 /* SceneDelegate.swift in Sources */,
+				DB18937225D52B5A002E8961 /* Parent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +385,7 @@
 			files = (
 				DB60759825BE93C90013426A /* ViewModelTests.swift in Sources */,
 				DB070D5F25B7FEEC00FB0685 /* GeneratedMocks.swift in Sources */,
+				DB18938C25D52EB5002E8961 /* ParentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
