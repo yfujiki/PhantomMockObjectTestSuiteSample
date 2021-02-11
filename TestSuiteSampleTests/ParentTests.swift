@@ -25,7 +25,7 @@ class ParentTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        // If we don't reset mock that has a weak reference property, mock will leak and could cause "No stub for method ..." error when running test suites
+        // If we don't reset mock that has a weak reference property, mock will leak and could cause "No stub for method ..." error when running test suites. Just uncomment following line and this test file will succeed.
 //        Cuckoo.reset(child)
         child = nil
         sut = nil

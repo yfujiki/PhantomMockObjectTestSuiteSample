@@ -19,7 +19,7 @@ class ViewModelTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        // If we don't nil out instance variables, then mock will leak and it could cause "No stub for method ..." error when running test suites
+        // If we don't nil out instance variables, then mock will leak and it could cause "No stub for method ..." error when running test suites. Just uncomment following two lines and this test file will succeed.
         // logger = nil
         // sut = nil
     }
