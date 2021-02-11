@@ -13,8 +13,9 @@ An example project to reproduce mysterious "No stub for method XXX()" error
 No stub for method `logAppIsActive()` using parameters (). (NSInternalInconsistencyException)
 ```
 
-If you uncomment L23~24 of `ViewModelTests.swift` and run the test suite again, it would succeed.
+If you uncomment L23~24 of `ViewModelTests.swift`, and L29 of `ParentTests.swift` and run the test suite again, it would succeed.
 
 ### Explanation
 
-In my medium post. 
+Detail in my [medium post](https://yfujiki.medium.com/hunting-down-phantom-mock-instances-in-xctestcases-95d35458f75f). 
+
