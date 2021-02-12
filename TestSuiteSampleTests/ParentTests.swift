@@ -47,7 +47,9 @@ class ParentTests: XCTestCase {
         }
 
         // When:
-        NotificationCenter.default.post(name: childCryingNotification, object: self)
+        NotificationCenter.default
+            .post(name: childCryingNotification,
+                  object: self)
 
         // Then:
         verify(child).rescued()

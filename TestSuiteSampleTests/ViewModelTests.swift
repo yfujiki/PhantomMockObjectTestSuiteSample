@@ -44,7 +44,9 @@ class ViewModelTests: XCTestCase {
         }
 
         // When:
-        NotificationCenter.default.post(name: UIApplication.didBecomeActiveNotification, object: self)
+        NotificationCenter.default
+            .post(name: UIApplication.didBecomeActiveNotification,
+                  object: self)
 
         // Then:
         verify(logger, times(1)).logAppIsActive()
